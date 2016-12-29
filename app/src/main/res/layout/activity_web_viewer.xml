@@ -4,23 +4,33 @@
     android:layout_height="match_parent"
     tools:context=".WebViewer" >
 
-    
-	<WebView
-    android:id="@+id/mainweb"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-		android:layout_alignParentTop="true" />
 
-	<Button
-	    android:id="@+id/button1"
-	    style="?android:attr/buttonStyleSmall"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentBottom="true"
-	    android:layout_alignParentEnd="true"
-	    android:layout_alignParentRight="true"
-	    android:layout_marginBottom="68dp"
-	    android:onClick="refresh"
-	    android:text="@string/refresh_text" />
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<WebView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/mainweb"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="false" />
+
+		<Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="68dp"
+            android:onClick="refresh"
+            android:text="@string/refresh_text"
+			android:layout_gravity="right|bottom" />
+
+	</FrameLayout>
 
 </RelativeLayout>
